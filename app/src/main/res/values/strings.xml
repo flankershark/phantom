@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Food on Foot</string>
+    <string name="login">Login</string>
+    <string name="search">Search</string>
+    <string name="result">Result</string>
+    <string name="detail">Detail</string>
+    <string name="map">Map</string>
+</resources>
