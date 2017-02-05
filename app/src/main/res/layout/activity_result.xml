@@ -11,11 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ac.phantom.ResultActivity">
 
-    <Button
-        android:id="@+id/detail_button"
+    <ListView
+        android:id="@+id/result_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="resultOnClick"
-        android:text="@string/result"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
