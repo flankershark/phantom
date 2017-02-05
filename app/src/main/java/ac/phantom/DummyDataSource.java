@@ -1,0 +1,49 @@
+package ac.phantom;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ac.phantom.model.Dish;
+import ac.phantom.model.Restaurant;
+import ac.phantom.model.SearchResult;
+import ac.phantom.model.User;
+
+/**
+ * Created by ron on 2/5/17.
+ */
+
+public class DummyDataSource {
+    private static List<User> users = null;                  // user list (table)
+    private static List<Restaurant> restaurants = null;      // restaurant list (table)
+    private static List<Dish> dishes = null;                 // dish list (table)
+    private static List<SearchResult> searchResults = null;  // search results
+
+    static {
+        // constructs a couple of users
+        users = new ArrayList<>();
+        users.add(new User(1, "alice@ac.com", "123456"));
+        users.add(new User(2, "bob@ac.com", "654321"));
+
+        // creates a few restaurants
+        restaurants = new ArrayList<>();
+        restaurants.add(new Restaurant(1, "McDonald's", "1380 Collage Square, Ottawa, ON", "+1 (613) 255-0000"));
+        restaurants.add(new Restaurant(2, "Tim Hortons", "1400 Collage Square, Ottawa, ON", "+1 (613) 255-1111"));
+
+        // constructs a number of dishes
+        dishes = new ArrayList<>();
+        dishes.add(new Dish(1, "Egg McMuffin", "It's way healthy than you thought", R.mipmap.eggmcmuffin, "Egg", restaurants.get(0)));
+        dishes.add(new Dish(2, "Peanut Butter Cookie", "Eat healthy eat fresh", R.mipmap.timcookies, "Peanut", restaurants.get(1)));
+        dishes.add(new Dish(3, "Filet-O-Fish", "Nothing could be better", R.mipmap.filetofish, "Fish", restaurants.get(0)));
+
+        // randomly generates some search results
+        searchResults = new ArrayList<>();
+        for (int i = 0; i <= 50; ++i)
+            searchResults.add(new SearchResult(dishes.get(i % dishes.size())));
+    }
+
+    public static List<SearchResult> search(/* String query */) {
+        return searchResults;
+    }
+}
+
+//:)~
