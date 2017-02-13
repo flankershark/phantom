@@ -6,6 +6,7 @@
     <string name="detail">Detail</string>
     <string name="map">Map</string>
     <string name ="allergies">allergies</string>
+    <string name="Spinner_Title">Allergies</string>
 
     <string-array name="allergies">
         <item>Peanut</item>
