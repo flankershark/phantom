@@ -21,7 +21,7 @@ public class DetailActivity extends Activity {
 
         textView = (TextView) findViewById(R.id.textView);//text view reference
 
-        String string = "Detail\b\n\n Restaurant name : McDonald's\n Address : 1380 Collage Square, Ottawa, ON\n Phone number : +1 (613) 255-0000 \n\n\n Nutrition :\n\n Calories : 290 Kcal\n Carbohydrate : 29 g\n Fat : 11 g\n\n Ingredients : \n\n\n\n" ;
+        String string = "Egg McMuffin\n\n\nDetail\b\n\n Restaurant name : McDonald's\n Address : 1380 Collage Square, Ottawa, ON\n Phone number : +1 (613) 255-0000 \n\n\n Nutrition :\n\n Calories : 290 Kcal\n Carbohydrate : 29 g\n Fat : 11 g\n\n Ingredients : \n\n\n\n" ;
 
         textView.setText(string);
        // entry_headword
