@@ -4,17 +4,44 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ac.phantom.SearchActivity">
 
-    <Button
-        android:id="@+id/search_button"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="searchOnClick"
-        android:text="@string/search"/>
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:onClick="searchOnClick"
+            android:text="@string/search"
+            android:layout_alignTop="@+id/Search_Edit_Text"
+            android:layout_toEndOf="@+id/Search_Edit_Text"
+            android:layout_alignBottom="@+id/Search_Edit_Text" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/search"
+            android:ems="10"
+            android:id="@+id/Search_Edit_Text"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:prompt="@string/Spinner_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_button"
+            android:layout_alignEnd="@+id/search_button" />
+
+    </RelativeLayout>
 </LinearLayout>
