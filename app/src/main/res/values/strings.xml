@@ -5,4 +5,13 @@
     <string name="result">Result</string>
     <string name="detail">Detail</string>
     <string name="map">Map</string>
+    <string name ="allergies">allergies</string>
+
+    <string-array name="allergies">
+        <item>Peanut</item>
+        <item>Gluten</item>
+        <item>Shell Fish</item>
+        <item>Soy</item>
+        <item>Vegetarian</item>
+    </string-array>
 </resources>
