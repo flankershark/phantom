@@ -34,8 +34,22 @@ public class DummyDataSource {
         dishes.add(new Dish(3, "Filet-O-Fish", "Nothing could be better", R.mipmap.filetofish, "Fish", restaurants.get(0)));
     }
 
+    public static boolean login(String userid, String password) {
+        for (User u : users)
+            if (u.email == userid && u.password == password)
+                return true;
+        return false;
+    }
+
     public static List<Dish> search(String query, String exclude) {
         return dishes;
+    }
+
+    public static Dish detail(int id) {
+        for (Dish d : dishes)
+            if (d.id == id)
+                return d;
+        return null;
     }
 }
 
