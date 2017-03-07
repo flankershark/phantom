@@ -5,7 +5,6 @@ import java.util.List;
 
 import ac.phantom.model.Dish;
 import ac.phantom.model.Restaurant;
-import ac.phantom.model.SearchResult;
 import ac.phantom.model.User;
 
 /**
@@ -16,7 +15,6 @@ public class DummyDataSource {
     private static List<User> users = null;                  // user list (table)
     private static List<Restaurant> restaurants = null;      // restaurant list (table)
     private static List<Dish> dishes = null;                 // dish list (table)
-    private static List<SearchResult> searchResults = null;  // search results
 
     static {
         // constructs a couple of users
@@ -34,15 +32,10 @@ public class DummyDataSource {
         dishes.add(new Dish(1, "Egg McMuffin", "It's way healthy than you thought", R.mipmap.eggmcmuffin, "Egg", restaurants.get(0)));
         dishes.add(new Dish(2, "Peanut Butter Cookie", "Eat healthy eat fresh", R.mipmap.timcookies, "Peanut", restaurants.get(1)));
         dishes.add(new Dish(3, "Filet-O-Fish", "Nothing could be better", R.mipmap.filetofish, "Fish", restaurants.get(0)));
-
-        // randomly generates some search results
-        searchResults = new ArrayList<>();
-        for (int i = 0; i <= 50; ++i)
-            searchResults.add(new SearchResult(dishes.get(i % dishes.size())));
     }
 
-    public static List<SearchResult> search(/* String query */) {
-        return searchResults;
+    public static List<Dish> search(String query, String exclude) {
+        return dishes;
     }
 }
 

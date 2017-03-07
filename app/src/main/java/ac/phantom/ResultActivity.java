@@ -16,7 +16,7 @@ public class ResultActivity extends Activity {
 
         ListView resultList = (ListView) super.findViewById(R.id.result_list);
         if (resultList != null) {
-            resultList.setAdapter(new ResultAdapter(this, R.layout.item_result, DummyDataSource.search()));
+            resultList.setAdapter(new ResultAdapter(this, R.layout.item_result, DummyDataSource.search(null, null)));
             resultList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
