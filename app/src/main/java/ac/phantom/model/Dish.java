@@ -1,7 +1,10 @@
 package ac.phantom.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Created by runo on 2/5/17.
+ * Created by ron on 2/5/17.
  */
 
 public class Dish {
@@ -9,16 +12,21 @@ public class Dish {
     public String title;
     public String desc;
     public int image;
-    public String dr; // dietary restrictions
+    public List<Restriction> restrictions;
     public Restaurant restaurant;
 
-    public Dish(int id, String title, String desc, int image, String dr, Restaurant restaurant) {
+    public Dish(int id, String title, String desc, int image, Restaurant restaurant) {
         this.id = id;
         this.title = title;
         this.desc = desc;
         this.image = image;
-        this.dr = dr;
+        this.restrictions = new ArrayList<>();
         this.restaurant = restaurant;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s %s", this.title, this.desc, this.restaurant);
     }
 }
 
