@@ -46,6 +46,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(this, "Can't connect to mapping service", Toast.LENGTH_SHORT).show();
         }
 
+
+
         return false;
     }
 
