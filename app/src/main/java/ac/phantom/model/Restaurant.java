@@ -16,6 +16,11 @@ public class Restaurant {
         this.address = address;
         this.phone = phone;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s %s", this.name, this.address, this.phone);
+    }
 }
 
 //:)~
