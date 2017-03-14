@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import ac.phantom.model.Dish;
+
 public class ResultActivity extends Activity {
 
     @Override
@@ -16,12 +18,18 @@ public class ResultActivity extends Activity {
 
         ListView resultList = (ListView) super.findViewById(R.id.result_list);
         if (resultList != null) {
-            resultList.setAdapter(new ResultAdapter(this, R.layout.item_result, DummyDataSource.search(null, null)));
+            resultList.setAdapter(new ResultAdapter(this, R.layout.item_result, DummyDataSource.search(
+                    super.getIntent().getStringExtra(DummyDataSource.EXTRA_QUERY),
+                    super.getIntent().getStringExtra(DummyDataSource.EXTRA_RESTRICT))));
             resultList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent intent = new Intent(ResultActivity.this, DetailActivity.class);
-                    ResultActivity.super.startActivity(intent);
+                    ResultActivity.super.startActivity(
+                        new Intent(ResultActivity.this, DetailActivity.class).putExtra(
+                            DummyDataSource.EXTRA_DISH,
+                            ((Dish) parent.getItemAtPosition(position)).id
+                        )
+                    );
                 }
             });
         }
