@@ -7,8 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    map:cameraTargetLat="45.352386"
-    map:cameraTargetLng="-75.754869"
-    map:cameraZoom="15"
 
+    
     />
