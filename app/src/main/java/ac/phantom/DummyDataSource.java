@@ -18,6 +18,11 @@ public class DummyDataSource {
     private static List<Dish> dishes = null;                 // dish list (table)
     private static List<Restriction> restrictions = null;    // dietary restriction list (table)
 
+    public final static String EXTRA_RESTRICT = "r";
+    public final static String EXTRA_QUERY = "q";
+    public final static String EXTRA_DISH = "d";
+    public final static String EXTRA_ADDR = "a";
+
     static {
         // dietary restrictions
         restrictions = new ArrayList<>();
@@ -27,8 +32,8 @@ public class DummyDataSource {
 
         // constructs a couple of users
         users = new ArrayList<>();
-        users.add(new User(1, "alice@ac.com", "123456"));
-        users.add(new User(2, "bob@ac.com", "654321"));
+        users.add(new User(1, "alice", "123456"));
+        users.add(new User(2, "bob", "654321"));
         for (int i = 0; i < users.size(); ++i)
             users.get(i).restrictions.add(restrictions.get(i % restrictions.size()));
 
