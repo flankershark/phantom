@@ -61,7 +61,7 @@ public class DummyDataSource {
 
     public static User login(String userid, String password) {
         for (User u : users)
-            if (u.email == userid && u.password == password)
+            if (u.email.equals(userid) && u.password.equals(password))
                 return u;
         return null;
     }
