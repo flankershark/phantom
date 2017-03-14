@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final int ERROR_DIALOG_REQUEST = 9001;
     private GoogleMap mMap;
-    private static final double
+    public static final double
             AC_LAT = 45.352386,
             AC_LNG =-75.754869;
     @Override
@@ -46,8 +46,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(this, "Can't connect to mapping service", Toast.LENGTH_SHORT).show();
         }
 
-
-
         return false;
     }
 
@@ -65,9 +63,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap m) {
         mMap = m;
         LatLng CurrentLocation = new LatLng(AC_LAT , AC_LNG);
-        mMap.addMarker(new MarkerOptions()
+            mMap
+                .addMarker(new MarkerOptions()
                 .position(CurrentLocation).title("Algonquin College - Current location"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CurrentLocation,10));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CurrentLocation,11));
         LatLng  RestaurantLocation = new LatLng(45.415313, -75.691632);
         mMap.addMarker(new MarkerOptions()
                 .position(RestaurantLocation)
