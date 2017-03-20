@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final int ERROR_DIALOG_REQUEST = 9001;
     private GoogleMap mMap;
-    private static final double
+    public static final double
             AC_LAT = 45.352386,
             AC_LNG =-75.754869;
     @Override
@@ -46,8 +46,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(this, "Can't connect to mapping service", Toast.LENGTH_SHORT).show();
         }
 
-
-
         return false;
     }
 
@@ -65,17 +63,18 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap m) {
         mMap = m;
         LatLng CurrentLocation = new LatLng(AC_LAT , AC_LNG);
-        mMap.addMarker(new MarkerOptions()
+            mMap
+                .addMarker(new MarkerOptions()
                 .position(CurrentLocation).title("Algonquin College - Current location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CurrentLocation,10));
         LatLng  RestaurantLocation = new LatLng(45.415313, -75.7560937);
         mMap.addMarker(new MarkerOptions()
                 .position(RestaurantLocation)
-                .title("McDonald`s - locate at  1380 College Square, Ottawa,On")
-                .snippet("2 min (550), via College Ave.Fastest route"));
+                .title(" McDonald`s - locate at 1380 College Square,Ottawa,On")
+                .snippet("2 min (550 m),via College Ave.Fastest route"));
 
         Polyline line = mMap.addPolyline(new PolylineOptions()
-                .add(new LatLng(AC_LAT , AC_LNG), new LatLng(45.415313, -75.7560937))
+                .add(new LatLng(AC_LAT , AC_LNG), new LatLng(45.415313,-75.7560937 ))
                 .width(5)
                 .color(Color.RED));
 
