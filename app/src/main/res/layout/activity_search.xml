@@ -29,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/search"
             android:ems="10"
             android:id="@+id/Search_Edit_Text"
             android:layout_alignParentTop="true"
