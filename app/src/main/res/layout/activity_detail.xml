@@ -30,7 +30,7 @@
 
 
     <Button
-        android:text="1380 Collage Square, Ottawa, ON"
+
         android:layout_width="348dp"
         android:layout_height="wrap_content"
         android:onClick="mapOnClick"
