@@ -9,6 +9,7 @@
     <string name="Spinner_Title">Allergies</string>
 
     <string-array name="allergies">
+        <item>Select</item>
         <item>Egg</item>
         <item>Peanut</item>
         <item>Fish</item>
