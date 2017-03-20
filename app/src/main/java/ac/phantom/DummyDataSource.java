@@ -45,7 +45,7 @@ public class DummyDataSource {
 
         // constructs a number of dishes
         dishes = new ArrayList<>();
-        dishes.add(new Dish(6, "National Pride", "Topped with classic pepperoni, fresh mushrooms, bacon crumble and mozzarella cheese. Made by a proudly Canadian company. Tip: Try with cheddar jalapeno dipping sauce.", R.mipmap.pizza, restaurants.get(2)));
+        dishes.add(new Dish(6, "National Pride", "Topped with classic pepperoni, fresh mushrooms, bacon crumble and mozzarella cheese. Made by a proudly Canadian company.\n\n Tip: Try with cheddar jalapeno dipping sauce.", R.mipmap.pizza, restaurants.get(2)));
         dishes.add(new Dish(1, "Egg McMuffin", "It's way healthy than you thought", R.mipmap.eggmcmuffin, restaurants.get(0)));
         dishes.add(new Dish(9, "Triple Thick Milkshake®", "Thick, smooth and deliciously creamy soft serve, mixed with your choice of decadent chocolate, strawberry or vanilla syrup for an extra taste of yumminess.", R.mipmap.mcdrink, restaurants.get(0)));
         dishes.add(new Dish(5, "Chicken with Attitude", "Topped with chipotle chicken, red onions, chipotle BBQ sauce and mozzarella cheese.", R.mipmap.pizza, restaurants.get(2)));
