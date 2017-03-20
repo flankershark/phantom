@@ -68,14 +68,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions()
                 .position(CurrentLocation).title("Algonquin College - Current location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CurrentLocation,10));
-        LatLng  RestaurantLocation = new LatLng(45.415313, -75.691632);
+        LatLng  RestaurantLocation = new LatLng(45.415313, -75.7560937);
         mMap.addMarker(new MarkerOptions()
                 .position(RestaurantLocation)
-                .title("Talay Thai - locate at 511 Bank St, Ottawa, ON K2P 1Z5")
-                .snippet("10 min (10.2 km)via Trans-Canada Hwy/ON-417"));
+                .title("McDonald`s - locate at  1380 College Square, Ottawa,On")
+                .snippet("2 min (550), via College Ave.Fastest route"));
 
         Polyline line = mMap.addPolyline(new PolylineOptions()
-                .add(new LatLng(AC_LAT , AC_LNG), new LatLng(45.415313, -75.691632))
+                .add(new LatLng(AC_LAT , AC_LNG), new LatLng(45.415313, -75.7560937))
                 .width(5)
                 .color(Color.RED));
 
