@@ -32,11 +32,13 @@ public class ResultAdapter extends ArrayAdapter<Dish> {
         ImageView imageView = (ImageView) convertView.findViewById(R.id.item_result_image);
         TextView titleView = (TextView) convertView.findViewById(R.id.item_result_title);
         TextView descView  = (TextView) convertView.findViewById(R.id.item_result_desc);
+        TextView restrictView = (TextView) convertView.findViewById(R.id.item_result_restrict);
 
         if (data != null) {
             if (imageView != null) imageView.setImageResource(data.image);
             if (titleView != null) titleView.setText(data.title);
             if (descView  != null) descView.setText(data.restaurant.name);
+            if (restrictView != null) restrictView.setText(data.restrictions.toString());
         }
 
         return convertView;
