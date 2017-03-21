@@ -45,12 +45,12 @@ public class DummyDataSource {
 
         // constructs a number of dishes
         dishes = new ArrayList<>();
+        dishes.add(new Dish(1, "Egg McMuffin", "We break it; then we make it. Our signature breakfast sandwich boasts one freshly cracked, large Canada Grade A egg topped with Canadian bacon and a slice of tasty processed cheddar cheese, sitting happily on a toasted English muffin.", R.mipmap.eggmcmuffin, restaurants.get(0)));
         dishes.add(new Dish(6, "National Pride", "Topped with classic pepperoni, fresh mushrooms, bacon crumble and mozzarella cheese. Made by a proudly Canadian company. Tip: Try with cheddar jalapeno dipping sauce.", R.mipmap.pizza, restaurants.get(2)));
-        dishes.add(new Dish(1, "Egg McMuffin", "It's way healthy than you thought", R.mipmap.eggmcmuffin, restaurants.get(0)));
         dishes.add(new Dish(9, "Triple Thick Milkshake®", "Thick, smooth and deliciously creamy soft serve, mixed with your choice of decadent chocolate, strawberry or vanilla syrup for an extra taste of yumminess.", R.mipmap.mcdrink, restaurants.get(0)));
         dishes.add(new Dish(5, "Chicken with Attitude", "Topped with chipotle chicken, red onions, chipotle BBQ sauce and mozzarella cheese.", R.mipmap.pizza, restaurants.get(2)));
         dishes.add(new Dish(2, "Peanut Butter Cookie", "Eat healthy eat fresh", R.mipmap.timcookies, restaurants.get(1)));
-        dishes.add(new Dish(3, "Filet O Fish", "Nothing could be better", R.mipmap.filetofish, restaurants.get(0)));
+        dishes.add(new Dish(3, "Filet O Fish", "Fresh from the deep, cold waters of Alaska’s Bering Sea, this light filet of Alaska Pollock is all yours. Pure temptation on a lightly steamed bun, topped with processed cheddar cheese and tangy tartar sauce.", R.mipmap.filetofish, restaurants.get(0)));
         dishes.add(new Dish(4, "Hot & Spicy Chicken", "Made with our Buffalo blue cheese sauce, grilled chicken, red onions, fire roasted red peppers & mozzarella cheese.", R.mipmap.pizza, restaurants.get(2)));
         dishes.add(new Dish(8, "McFlurry®", "Deliciousness starts with creamy vanilla soft serve swirled together with your favourite mix-ins. Choose your McFlurry® treat, from SKOR® to Oreo® to M&M’s® candies and enjoy the yummy taste.", R.mipmap.mcdrink, restaurants.get(0)));
         dishes.add(new Dish(7, "Sweet Heat", "Mesquite chicken, pineapple, hot banana peppers and mozzarella cheese", R.mipmap.pizza, restaurants.get(2)));
