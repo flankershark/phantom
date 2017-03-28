@@ -16,6 +16,9 @@ public class ResultActivity extends Activity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_result);
 
+        super.setTitle(String.format("!%s, %s",
+                super.getIntent().getStringExtra(DummyDataSource.EXTRA_RESTRICT),
+                super.getIntent().getStringExtra(DummyDataSource.EXTRA_QUERY)));
         ListView resultList = (ListView) super.findViewById(R.id.result_list);
         if (resultList != null) {
             resultList.setAdapter(new ResultAdapter(this, R.layout.item_result, DummyDataSource.search(
